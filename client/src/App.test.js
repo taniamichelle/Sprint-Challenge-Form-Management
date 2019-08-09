@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import Form from './components/Form';
 import { render, cleanup, fireEvent } from '@testing-library/react';
 // import '@testing-library/react/cleanup-after-each';
 
@@ -21,12 +22,9 @@ describe('<App />', () => {
   });
 });
 
-// describe('<Dashboard />', () => {
-//   it('increments current counts', () => {
-//     const { getByTestId } = render(<Dashboard />);
-//     fireEvent.click(getByTestId('strike'));
-//     fireEvent.click(getByTestId('ball'));
-//     fireEvent.click(getByTestId('foul'));
-//     fireEvent.click(getByTestId('hit'));
-//   })
-// })
+describe('<Form />', () => {
+  it('submits form', () => {
+    const { getByTestId } = render(<Form />);
+    fireEvent.click(getByTestId('submit'));
+  })
+})
