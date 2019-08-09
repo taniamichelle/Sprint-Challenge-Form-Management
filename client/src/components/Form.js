@@ -4,6 +4,7 @@ import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
 import { TextField } from 'formik-material-ui';
 import './form.css';
+import { getDefaultNormalizer } from '@testing-library/react';
 
 //STEP 1: Create UserForm
 const UserForm = ({ errors, touched, values }) => {
